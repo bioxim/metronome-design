@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Metronome | Design Sheet</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Exact CSS Variables for The Metronome */
+        :root {
+            /* Dark Backgrounds */
+            --bg-main: #1d1e1d;
+            /* Almost black gray */
+            --bg-secondary: #172039;
+            /* Dark navy blue */
+
+            /* Brand Colors and Accents */
+            --brand-primary: #1fc0e2;
+            /* Vibrant cyan */
+            --brand-purple: #664aa4;
+            /* Purple */
+            --brand-blue: #4483c4;
+            /* Dark blue */
+            --brand-lightblue: #389dce;
+            /* Light blue */
+            --brand-muted-purple: #625196;
+            /* Muted purple */
+            --brand-periwinkle: #536ab4;
+            /* Periwinkle blue */
+
+            /* Text Colors */
+            --text-titles: #FFFFFF;
+            /* Pure white for titles and links */
+            --text-main: #ededed;
+            /* Light gray for normal text */
+            --text-muted: #8B949E;
+            /* Medium gray for secondary notes */
+        }
+
+        /* Global Configuration */
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Specific styles for Titles (White) */
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: var(--text-titles) !important;
+            font-weight: 800;
+        }
+
+        /* Specific styles for Links (White with underline) */
+        a {
+            color: var(--text-titles) !important;
+            text-decoration: underline;
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: var(--brand-primary) !important;
+            /* Changes to Cyan on hover */
+        }
+
+        /* Custom utility classes to map with Tailwind */
+        .text-brand {
+            color: var(--brand-primary);
+        }
+
+        .bg-secondary {
+            background-color: var(--bg-secondary);
+        }
+
+        .border-subtle {
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+</head>
+
+<body class="p-6 md:p-12 max-w-5xl mx-auto leading-relaxed">
+
+    <header class="mb-16 border-b border-subtle pb-10 flex flex-col md:flex-row items-center gap-8">
+        <img src="metronome_full_logo.png" alt="The Metronome Full Logo"
+            class="h-28 w-auto rounded-lg shadow-2xl border border-subtle">
+
+        <div class="text-center md:text-left">
+            <h1 class="text-5xl font-extrabold mb-2">The Metronome</h1>
+            <p class="text-2xl text-brand font-semibold">Brand Guidelines & Web3 Design Sheet</p>
+        </div>
+    </header>
+
+    <section class="mb-12 bg-secondary p-8 rounded-xl border border-subtle shadow-xl">
+        <h2 class="text-3xl mb-6">1. Concept & Inspiration</h2>
+        <p class="mb-5">The design of <strong class="text-white">The Metronome</strong> is born from the intersection of
+            high-performance blockchain technology and financial discipline.</p>
+        <ul class="list-disc list-inside space-y-3 pl-2">
+            <li><strong>The Isologo (The Pulse):</strong> Simultaneously represents the letter "M", the constant beat of
+                a metronome, and the movement of market charts. It symbolizes automatic execution with millimeter
+                precision.</li>
+            <li><strong>The Wordmark:</strong> Uses clean and geometric lines to convey security, transparency, and
+                modernity.</li>
+        </ul>
+    </section>
+
+    <section class="mb-12">
+        <h2 class="text-3xl mb-6">2. Color Palette (Official Codes)</h2>
+        <p class="mb-6 text-[--text-main]">The palette combines the seriousness of dark mode with cyan, blue, and purple
+            accents to guide user interaction.</p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 font-mono text-xs">
+            <div class="p-4 rounded-lg border border-subtle flex flex-col items-center justify-center text-center shadow-md h-24"
+                style="background-color: var(--bg-main);">
+                <span class="text-white font-bold mb-1">BG Main</span><span class="text-white">#1d1e1d</span>
+            </div>
+            <div class="p-4 rounded-lg border border-subtle flex flex-col items-center justify-center text-center shadow-md h-24"
+                style="background-color: var(--bg-secondary);">
+                <span class="text-white font-bold mb-1">BG Secondary</span><span class="text-white">#172039</span>
+            </div>
+            <div class="p-4 rounded-lg border border-subtle flex flex-col items-center justify-center text-center shadow-md h-24"
+                style="background-color: var(--brand-primary);">
+                <span class="text-[#1d1e1d] font-bold mb-1">Brand Cyan</span><span class="text-[#1d1e1d]">#1fc0e2</span>
+            </div>
+            <div class="p-4 rounded-lg border border-subtle flex flex-col items-center justify-center text-center shadow-md h-24"
+                style="background-color: var(--brand-purple);">
+                <span class="text-white font-bold mb-1">Purple</span><span class="text-white">#664aa4</span>
+            </div>
+            <div class="p-4 rounded-lg border border-subtle flex flex-col items-center justify-center text-center shadow-md h-24"
+                style="background-color: var(--brand-lightblue);">
+                <span class="text-[#1d1e1d] font-bold mb-1">Light Blue</span><span class="text-[#1d1e1d]">#389dce</span>
+            </div>
+            <div class="p-4 rounded-lg border border-subtle flex flex-col items-center justify-center text-center shadow-md h-24"
+                style="background-color: var(--brand-blue);">
+                <span class="text-white font-bold mb-1">Blue</span><span class="text-white">#4483c4</span>
+            </div>
+            <div class="p-4 rounded-lg border border-subtle flex flex-col items-center justify-center text-center shadow-md h-24"
+                style="background-color: var(--brand-periwinkle);">
+                <span class="text-white font-bold mb-1">Periwinkle</span><span class="text-white">#536ab4</span>
+            </div>
+            <div class="p-4 rounded-lg border border-subtle flex flex-col items-center justify-center text-center shadow-md h-24"
+                style="background-color: var(--brand-muted-purple);">
+                <span class="text-white font-bold mb-1">Muted Purple</span><span class="text-white">#625196</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-12 bg-secondary p-8 rounded-xl border border-subtle shadow-xl">
+        <h2 class="text-3xl mb-6">3. Typography</h2>
+        <p class="mb-6">Guarantees extreme legibility for financial data, wallet balances, and percentages.</p>
+
+        <div class="space-y-8">
+            <div class="border-b border-subtle pb-6">
+                <h3 class="text-xl mb-3" style="color: var(--brand-primary);">Inter (Sans-Serif Stack)</h3>
+                <p class="text-sm text-[--text-muted] mb-3">Used for Titles, Buttons, and general UI.</p>
+                <p class="text-5xl mb-3 font-extrabold text-white">AaBbCcEe</p>
+                <p class="text-xl">Aa Bb Cc Dd Ee Ff Gg 0123456789</p>
+            </div>
+            <div>
+                <h3 class="text-xl mb-3 font-mono" style="color: var(--brand-primary);">JetBrains Mono (Monospace)</h3>
+                <p class="text-sm text-[--text-muted] mb-3">Used for Numbers, Web3 Addresses, and Code.</p>
+                <p class="text-5xl mb-3 font-mono text-white">AaBbCcEe</p>
+                <p class="text-xl font-mono">Aa Bb Cc Dd Ee Ff Gg 0123456789</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-12">
+        <h2 class="text-3xl mb-6">4. UI Application Examples</h2>
+        <p class="mb-6 text-[--text-main]">How elements combine in The Metronome's interface.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-secondary p-6 rounded-lg border border-subtle">
+                <h4 class="text-lg mb-4 text-white">Primary Button</h4>
+                <button
+                    class="bg-[--brand-primary] text-[--bg-main] font-bold py-3 px-6 rounded-lg text-lg w-full hover:bg-white transition-colors duration-150">
+                    Approve & Start Metronome
+                </button>
+            </div>
+
+            <div class="bg-secondary p-6 rounded-lg border border-subtle">
+                <h4 class="text-lg mb-4 text-white">Texts and Links</h4>
+                <p class="mb-3 text-[--text-main]">This is a light gray paragraph. To learn how our strategy works, read
+                    the <a href="#">technical documentation here</a>.</p>
+                <p class="text-sm text-[--text-muted]">Note: Early cancellation penalties apply.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
